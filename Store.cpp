@@ -55,11 +55,13 @@ int main() {
     store.initItem(1001, "Coffee", 1.99, 50);
     store.initItem(1002, "Chips", 1.49, 30);
 
-    store.initFuel(001, "REGULAR", 1.013, 1000.0);
-    store.initFuel(001, "PLUS", 1.025, 1000.0);
-    store.initFuel(001, "DIESEL", 1.100, 2000.0);
+    store.initFuel(1, "REGULAR", 1.013, 1000.0);
+    store.initFuel(2, "PLUS", 1.025, 1000.0);
+    store.initFuel(19, "DIESEL", 1.100, 2000.0);
 
     store.sellItem(1001, 2);
+    store.sellFuel(19,30);
+    store.sellItem(1002,4);
 
     std::cout << "Revenue: $" << store.totalRevenue() << "\n";
 }
